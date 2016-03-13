@@ -13,8 +13,7 @@
     <Name>py_eye_detection</Name>
     <RootNamespace>py_eye_detection</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>
-    </CommandLineArguments>
+    <CommandLineArguments>eye.png</CommandLineArguments>
     <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
