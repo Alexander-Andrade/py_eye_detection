@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 def detect_circles(files_list):
-    for file in files_list:
+    for i,file in enumerate(files_list):
         img = cv.imread(file)
         gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
         filtered_gray = cv.medianBlur(gray,5)
@@ -28,10 +28,11 @@ def detect_circles(files_list):
                 cv.circle(img,(i[0],i[1]),i[2],(0,255,0),1)
                 # draw the center of the circle
                 cv.circle(img,(i[0],i[1]),2,(0,0,255),2)
-        cv.imshow('detected circles',img)
+        cv.imshow('circ' + i,img)
+       
         name_ext = file.split('.')
-        cv.imwrite(name_ext[0] + '1.' + name_ext[1], img)
-    cv.waitKey(0)
+        cv.imwrite(name_ext[0] + '_circ.' + name_ext[1], img)
+    cv.waitKey(1)      
     cv.destroyAllWindows()
 
 
