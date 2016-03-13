@@ -30,7 +30,7 @@ if __name__ == '__main__':
             # draw the center of the circle
             cv.circle(img,(i[0],i[1]),2,(0,0,255),2)
     cv.imshow('detected circles',img)
-    cv.waitKey()
-    name_ext = sysy.argv[1].split('.')
+    name_ext = sys.argv[1].split('.')
     cv.imwrite(name_ext[0] + '1.' + name_ext[1], img)
+    cv.waitKey()
     cv.destroyAllWindows()
