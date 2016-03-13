@@ -9,6 +9,8 @@ if __name__ == '__main__':
         ret,frame = cap.read()
         img = frame.copy()
 
+
+
         gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
         filtered_gray = cv.medianBlur(gray,5)
         #filtered_gray = cv.GaussianBlur(gray,(5,5),0)
